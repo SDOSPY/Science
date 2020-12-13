@@ -48,7 +48,7 @@ A continuación, vaya al directorio Sources y abra el archivo de solución *Scie
 #### Con Mono en Linux
 
 ```bash
-# Install Mono
+# Instalar Mono
 sudo apt-get install mono-complete monodevelop monodevelop-nunit git autoconf make
 
 # Clonar el repositorio
@@ -56,6 +56,31 @@ git clone https://github.com/SDOSPY/science.git
 
 # Entrar en el directorio del proyecto
 cd science
+
+# Compile la solución de marco de trabajo con Mono
+./autogen.sh
+make build
+make samples
+make test
+```
+
+#### Con Mono en OS X
+
+```bash
+# Instalando Mono
+brew update
+brew cask install mono-mdk pkg-config automake
+
+# Clonar el repository
+git clone https://github.com/SDOSPY/framework.git
+
+# Entrar al directorio
+cd framework
+
+# Establezca algunas variables de entorno con rutas específicas de OSX
+export PKG_CONFIG_PATH=/Library/Frameworks/Mono.framework/Versions/Current/lib/pkgconfig/
+export MONO=/Library/Frameworks/Mono.framework/Versions/Current/bin/mono
+export XBUILD=/Library/Frameworks/Mono.framework/Versions/Current/bin/xbuild
 
 # Compile la solución de marco de trabajo con Mono
 ./autogen.sh
