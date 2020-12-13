@@ -1,0 +1,10 @@
+Name: Science.NET
+Description: The Science.NET Framework for Machine Learning, Image Processing, Mathematics and Statistics
+Version: @VERSION@
+URL: http://science-framework.net
+
+prefix=@prefix@
+exec_prefix=@exec_prefix@
+libdir=@libdir@
+
+Libs: -r:@libdir@/Science.Vision.dll -r:@libdir@/Science.Video.Ximea.dll -r:@libdir@/Science.Video.VFW.dll -r:@libdir@/Science.Video.Kinect.dll -r:@libdir@/Science.Video.dll -r:@libdir@/Science.Video.DirectShow.dll -r:@libdir@/Science.Neuro.dll -r:@libdir@/Science.Text.dll-r:@libdir@/Science.Math.dll -r:@libdir@/Science.Math.Core.dll -r:@libdir@/Science.MachineLearning.dll -r:@libdir@/Science.IO.dll -r:@libdir@/Science.DataSets.dll -r:@libdir@/Science.Imaging.dll -r:@libdir@/Science.Genetic.dll -r:@libdir@/Science.Fuzzy.dll -r:@libdir@/Science.dll -r:@libdir@/Science.Controls.Vision.dll -r:@libdir@/Science.Controls.Imaging.dll -r:@libdir@/Science.Controls.Audio.dll -r:@libdir@/Science.Audition.dll -r:@libdir@/Science.Audio.dll 
