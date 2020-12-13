@@ -1,0 +1,54 @@
+version: 3.8.2.{build}
+
+image:
+- Visual Studio 2017
+
+configuration:
+- mono
+- net35
+- net40
+- net45
+- net46
+- net462
+
+platform: Any CPU
+
+matrix:
+  exclude:
+    - configuration: net35
+      image: Visual Studio 2017
+
+clone_depth: 5
+
+before_build:
+- cmd: set PATH=C:\Program Files (x86)\MSBuild\14.0\Bin;%PATH%
+
+build:
+  project: Sources/Science.NET.sln
+  parallel: true
+  verbosity: normal
+  
+test:
+  assemblies:
+    only:
+    - Science.Tests.Audio.dll
+    - Science.Tests.Controls.dll
+    - Science.Tests.Core.dll
+    - Science.Tests.Imaging.dll
+    - Science.Tests.IO.dll
+    - Science.Tests.MachineLearning.dll
+    - Science.Tests.Math.dll
+    - Science.Tests.Math.Cpp.dll
+    - Science.Tests.Math.Interop.dll
+    - Science.Tests.Neuro.dll
+    - Science.Tests.Statistics.dll
+    - Science.Tests.Statistics.VB.dll
+    - Science.Tests.Text.dll
+    - Science.Tests.Video.dll
+    - Science.Tests.Vision.dll
+    
+  categories:
+    except:
+    - Office
+    - Random
+    - Slow
