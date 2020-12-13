@@ -48,6 +48,16 @@ Generated\ Files/
 TestResult.xml
 nunit-*.xml
 
+# Science.NET
+/Setup/Science.Setup.dll
+/Setup/Science.Setup.pdb
+/Sources/Science.Music
+/Sources/TestResults
+/Unit Tests/Science.Tests.Math.Cpp/Debug
+/Unit Tests/Science.Tests.Math.Cpp/Release
+/Unit Tests/packages
+
+
 # Build Results of an ATL Project
 [Dd]ebugPS/
 [Rr]eleasePS/
